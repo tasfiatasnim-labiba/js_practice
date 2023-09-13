@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript</title>
+
+    <!--css link-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <!--fontawesome link-->
+    <script src="https://kit.fontawesome.com/24da9f8b74.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <h1 style="text-align: center; font-size: 60px; margin-bottom: 100px;">JavaScript Practice</h1>
+    <div class="container mb_200">
+        <!-- Text change --> 
+        <h1 class="text-danger">Click on the button to change the text</h1>
+        <button type="button" class="btn btn-dark" onclick="textChange()">Text Change</button>
+        <h2 id="h2" class="text-primary">Lorem ipsum dolor sit amet.</h2>
+        
+        <hr>
+
+        <!-- Show date --> 
+        <h1 class="text-danger">Click on the button to show date</h1>
+        <button type="button" class="btn btn-dark" onclick="showDate()">Show Date</button>
+        <h2 id="d_h2" class="text-primary">Lorem ipsum dolor sit amet.</h2>
+
+        <hr>
+
+        <!-- Bulb on-off --> 
+        <h1 class="text-danger">Click on the button to turn ON/OFF the bulb</h1>
+        <button type="button" class="btn btn-success" onclick="bulbOn()">Bulb On</button>
+        <button type="button" class="btn btn-danger" onclick="bulbOff()">Bulb Off</button>
+        <img src="images/bulboff.gif" id="img" alt="">
+
+        <hr>
+
+        <!-- font-size change --> 
+        <h1 class="text-danger">Click on the button to change the font size</h1>
+        <button type="button" class="btn btn-dark" onclick="fontChange()">Font Change</button>
+        <h2 id="f_h2" class="text-primary">Lorem ipsum dolor sit amet.</h2>
+
+        <hr>
+
+        <!-- font-color change --> 
+        <h1 class="text-danger">Click on the button to change the font family</h1>
+        <button type="button" class="btn btn-dark" onclick="fontFamily()">Font-Family Change</button>
+        <h2 id="ff_h2" class="text-primary">Lorem ipsum dolor sit amet.</h2>
+
+        <hr>
+
+        <!-- show/hide text --> 
+        <h1 class="text-danger">Click on the button to show/hide text</h1>
+        <button type="button" class="btn btn-success" onclick="show()">Show</button>
+        <button type="button" class="btn btn-danger" onclick="hide()">Hide</button>
+        <h2 id="c_h2" class="text-primary">Lorem ipsum dolor sit amet.</h2>
+
+        <hr>
+
+        <!-- DWrite --> 
+        <h1 class="text-danger">Click on the button to show the text - document.write</h1>
+        <button type="button" class="btn btn-dark" onclick="writeOutput()">DWrite</button>
+
+        <hr>
+
+        <!-- WAlert --> 
+        <h1 class="text-danger">Click on the button to show the text - window.alert</h1>
+        <button type="button" class="btn btn-dark" onclick="walert()">WAlert</button>
+
+        <hr>
+
+        <!-- CLog --> 
+        <h1 class="text-danger">Click on the button to show the text - console.log</h1>
+        <button type="button" class="btn btn-dark" onclick="cLog()">cLog</button>
+
+        <hr>
+
+        <!-- variable --> 
+        <h1 class="text-danger">Click on the button to show the variable output</h1>
+        <button type="button" class="btn btn-dark" onclick="vOutput()">Variable output</button>
+        <h2 id="vh2"></h2>
+
+        <hr>
+
+        <!-- let --> 
+        <h1 class="text-primary">Click on the button to show the let output</h1>
+        <button type="button" class="btn btn-dark" onclick="lOutput()">Let output</button>
+        <h2 id="lh2"></h2>
+
+        <hr>
+
+        <!-- constant --> 
+        <h1 class="text-primary">Click on the button to show the constant output</h1>
+        <button type="button" class="btn btn-dark" onclick="cOutput()">Constant output</button>
+        <h2 id="ch2"></h2>
+
+        <hr>
+
+        <!-- constant --> 
+        <h1 class="text-primary">Click on the button to show the constant output</h1>
+        <button type="button" class="btn btn-dark" onclick="constOutput()">Const Output</button>
+        <h2 id="cout"></h2>
+
+        <hr>
+
+        <!-- mixed example --> 
+        <h1 class="text-primary">Click on the button to show the constant output</h1>
+        <button type="button" class="btn btn-dark" onclick="letOutput()">Output</button>
+        <h2 id="out"></h2>
+
+        <hr>
+
+        <!-- without variable declaration --> 
+        <h1 class="text-primary">Click on the button to show the output</h1>
+        <button type="button" class="btn btn-dark" onclick="wOutput()">Output</button>
+        <h2 id="wvh2"></h2>
+
+        <hr>
+
+        <!-- mixed -->
+        <h1 class="text-primary">Click on the button to show the output</h1>
+        <button type="button" class="btn btn-dark" onclick="mOutput()">Output</button>
+        <h2 id="mh2"></h2>
+
+        <hr>
+
+        <!-- example using let -->
+        <h1 class="text-primary">Click on the button to show the Car Name</h1>
+        <button type="button" class="btn btn-dark" onclick="letOutput()">Car Name</button>
+        <h2 id="demo"></h2>
+
+        <hr>
+
+        <!-- example using let -->
+        <h1 class="text-primary">Click on the button to show the JavaScript Variable</h1>
+        <button type="button" class="btn btn-dark" onclick="lettOutput()">Result</button>
+        <p>The result of adding 5 + 2 + 3 is:</p>
+        <h2 id="demo1"></h2>
+
+        <hr>
+
+        <!-- adding strings -->
+        <h1 class="text-primary">Click on the button to show the JavaScript Variable</h1>
+        <button type="button" class="btn btn-dark" onclick="strOutput()">Result</button>
+        <p>The result of adding "John" + " " + "Doe" is: </p>
+        <h2 id="demo2"></h2>
+        
+        <hr>
+
+        <!-- adding number and strings -->
+        <h1 class="text-primary">Click on the button to show the JavaScript Variable</h1>
+        <button type="button" class="btn btn-dark" onclick="nsOutput()">Result</button>
+        <p>The result of adding 2 + 3 + "5" is: </p>
+        <h2 id="demo3"></h2>
+
+        <hr>
+
+        <!-- js dollar sign -->
+        <h1>Click on the button to show the JavaScript Variable</h1>
+        <button type="button" class="btn btn-dark" onclick="dOutput()">Result</button>
+        <p>The dollar sign($) is treated as a letter in JavaScript names. </p>
+        <p>The result of adding $$$(=2) + $myMoney(=5) is: </p>
+        <h2 id="dh2"></h2>
+
+        <hr>
+
+        <!-- js underscore -->
+        <h1>Click on the button to show the JavaScript Variable</h1>
+        <button type="button" class="btn btn-dark" onclick="uOutput()">Result</button>
+        <p>The underscore( _ ) is treated as a letter in JavaScript names. </p>
+        <p>The result of adding _x(=7) + _100(=5) is: </p>
+        <h2 id="uh2"></h2>
+
+        <hr>
+
+        <!-- variable redeclaration using var -->
+        <h1>Click on the button to show the result</h1>
+        <button type="button" class="btn btn-dark" onclick="varOutput()">Result</button>
+        <h2>Redeclaring a Variable Using var</h2>
+        <h2 id="varh2"></h2>
+
+        <hr>
+
+        <!-- variable redeclaration using var -->
+        <h1>Click on the button to show the output using JavaScript var</h1>
+        <button type="button" class="btn btn-dark" onclick="vaOutput()">Result</button>
+        <h4>Redeclaring a JavaScript variable with <b>var</b> is allowed anywhere in a program: </h4>
+        <h2 id="vah2"></h2>
+
+        <hr>
+
+        <!-- redeclaring variable using let -->
+        <h1>Click on the button to show the result</h1>
+        <button type="button" class="btn btn-dark" onclick="leOutput()">Result</button>
+        <h2>Redeclaring a Variable Using let</h2>
+        <h2 id="leh2"></h2>
+
+        <hr>
+
+        <!-- variable redeclaration using let -->
+        <h1>Click on the button to show the output using JavaScript let</h1>
+        <button type="button" class="btn btn-dark" onclick="lettOutput()">Result</button>
+        <h4>Redeclaring a JavaScript variable with <b>let</b>, in another scope, or in another block, is allowed: </h4>
+        <h2 id="letth2"></h2>
+
+        <hr>
+
+        <!-- example using js const -->
+        <h1>Click on the button to show the Car Name</h1>
+        <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+        <button type="button" class="btn btn-dark" onclick="carsOutput()">Cars</button>
+        <h2 id="carsh2"></h2>
+
+        <hr>
+
+        <!-- example using js const -->
+        <h1>Click on the button to show the Car Properties</h1>
+        <p>Declaring a constant object does NOT make the objects properties unchangeable:</p>
+        <button type="button" class="btn btn-dark" onclick="carOutput()">Car Details</button>
+        <h2 id="carh2"></h2>
+
+        <hr>
+
+        <!-- example using js const -->
+        <h1>Click on the button to show the Car Properties</h1>
+        <p>JavaScropt const variables has block scope</p>
+        <button type="button" class="btn btn-dark" onclick="rOutput()">Value of r</button>
+        <h2 id="rh2"></h2>
+
+        <hr>
+
+        <!-- Assignment operator -->
+        <h1>JavaScript Operator</h1>
+        <h3>The Assignment (=) Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="fOutput()">Value</button>
+        <h2 id="fh2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '+' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="zzOutput()">Value</button>
+        <h2 id="zzh2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '-' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="zzzOutput()">Value</button>
+        <h2 id="zzzh2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '*' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="xyOutput()">Value</button>
+        <h2 id="xyh2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '/' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="xyOut()">Value</button>
+        <h2 id="xy"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '%' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="modOutput()">Value</button>
+        <h2 id="modh2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>Arithmetic Operations</h3>
+        <p>A typical arithmetic operation takes two numbers (or expressions) and produces a new number.</p>
+        <button type="button" class="btn btn-dark" onclick="axOutput()">Output</button>
+        <h2 id="axh2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '+=' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="pOutput()">Output</button>
+        <h2 id="ph2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '++' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="incOutput()">Output</button>
+        <h2 id="inch2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '--' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="decOutput()">Output</button>
+        <h2 id="dech2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-primary">JavaScript Operators</h1>
+        <h3>The '**' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="expOutput()">Output</button>
+        <h2 id="exph2"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-danger">JavaScript Operators</h1>
+        <h3>The 'Math.pow()' Operator</h3>
+        <button type="button" class="btn btn-dark" onclick="powOutput()">Output</button>
+        <h2 id="powh2"></h2>
+
+        <hr>
+
+        <!-- JS String Operators -->
+        <h1 class="text-danger">JavaScript String Operators</h1>
+        <p>All conditional operators can be used on both numbers and strings.</p>
+        <button type="button" class="btn btn-dark" onclick="stOutput()">Output</button>
+        <h2 id="sth2"></h2>
+
+        <hr>
+
+        <!-- JS String Operators -->
+        <h1 class="text-danger">JavaScript String Operators</h1>
+        <p>Note that strings are compared alphabetically:</p>
+        <button type="button" class="btn btn-dark" onclick="strrOutput()">Output</button>
+        <h2 id="strrh2"></h2>
+
+        <hr>
+
+        <!-- JS String Operators -->
+        <h1 class="text-danger">JavaScript String Operators</h1>
+        <h3>The '+=' Operator</h3>
+        <p>The assignment operator (+=) can concatenate strings.</p>
+        <button type="button" class="btn btn-dark" onclick="sttOutput()">Output</button>
+        <h2 id="stth2"></h2>
+
+        <hr>
+
+        <!-- JS String Operators -->
+        <h1 class="text-danger">JavaScript String Operators</h1>
+        <h3>The '+' Operator</h3>
+        <p>Adding a number and a string, returns a string.</p>
+        <button type="button" class="btn btn-dark" onclick="striOutput()">Output</button>
+        <h2 id="stri"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-danger">JavaScript Arithmetic</h1>
+        <h3>Operator Precedence</h3>
+        <p>Multiplications has precedence over addition.</p>
+        <p>The result of 100 + 50 * 3 is: </p>
+        <button type="button" class="btn btn-dark" onclick="preOutput()">Result</button>
+        <h2 id="pre"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-danger">JavaScript Arithmetic</h1>
+        <h3>Operator Precedence</h3>
+        <p>Multiplications has precedence over addition.</p>
+        <p>But parenthesis has precedence over multiplication.</p>
+        <p>The result of (100 + 50) * 3 is: </p>
+        <button type="button" class="btn btn-dark" onclick="precOutput()">Result</button>
+        <h2 id="prec"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-danger">JavaScript Arithmetic</h1>
+        <h3>Operator Precedence</h3>
+        <p>When many operations has the same precedence, they are computed from left to right.</p>
+        <p>The result of 100 + 50 - 3 is: </p>
+        <button type="button" class="btn btn-dark" onclick="prOutput()">Result</button>
+        <h2 id="pr"></h2>
+
+        <hr>
+
+        <!-- JS Arithmetic -->
+        <h1 class="text-danger">JavaScript Arithmetic</h1>
+        <h3>Operator Precedence</h3>
+        <p>When many operations has the same precedence, they are computed from left to right.</p>
+        <p>The result of 100 / 50 * 3 is: </p>
+        <button type="button" class="btn btn-dark" onclick="prrOutput()">Result</button>
+        <h2 id="prr"></h2>
+
+        <hr>
+
+        <!-- JS String -->
+        <h1 class="text-danger">JavaScript String</h1>
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string: </p>
+        <button type="button" class="btn btn-dark" onclick="stOutput()">Output</button>
+        <h2 id="st"></h2>
+
+        <hr>
+
+        <!-- JS String -->
+        <h1 class="text-danger">JavaScript Strings</h1>
+        <h2>The slice() Method</h2>
+        <button type="button" class="btn btn-dark" onclick="stringOutput()">Output</button>
+        <h2 id="string"></h2>
+
+        <hr>
+
+        <!-- JS BigInt -->
+        <h1 class="text-danger">JavaScript Numbers</h1>
+        <h2>Create a BigInt</h2>
+        <button type="button" class="btn btn-dark" onclick="numbOutput()">Output</button>
+        <h2 id="numb"></h2>
+
+
+    </div> 
+    <!--script-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
